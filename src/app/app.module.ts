@@ -9,7 +9,8 @@ import { AppRoutingModule }   from './app-routing.module';
 
 import { DashboardComponent }           from './dashboard/dashboard.component';
 import { BankAccountDetailsComponent }  from './bank-account-details/bank-account-details.component';
-import { BankAccountListComponent }     from './bank-account-list/bank-account-list.component';
+import { BankAccountListComponent    }  from './bank-account-list/bank-account-list.component';
+import { TransactionListComponent    }  from './transaction-list/transaction-list.component'
 
 import {BankAccountService}             from "./bank-account.service";
 
@@ -27,7 +28,8 @@ import 'hammerjs';
     AppComponent,
     DashboardComponent,
     BankAccountDetailsComponent,
-    BankAccountListComponent
+    BankAccountListComponent,
+    TransactionListComponent
   ],
   providers: [
     BankAccountService
