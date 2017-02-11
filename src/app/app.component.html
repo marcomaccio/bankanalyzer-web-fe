@@ -1,3 +1,26 @@
-<h1>
-  {{title}}
-</h1>
+<md-toolbar color="primary" breakAction="show">
+  <span>BankAnalyser</span>
+  <!-- This fills the remaining space of the current row -->
+  <span class="example-spacer"></span>
+
+  <span>
+    <button md-button class="md-icon-button" [routerLink]="['/']">
+      <md-icon>home</md-icon>
+    </button>
+  </span>
+  |
+  <span> <button md-button [routerLink]="['/bankaccounts']">Bank Accounts</button></span>
+  |
+  <span>
+    <button md-button [mdMenuTriggerFor]="menu">Username</button>
+
+    <md-menu #menu="mdMenu">
+      <button md-menu-item>Profile</button>
+      <button md-menu-item>Log out</button>
+    </md-menu>
+
+  </span>
+
+</md-toolbar>
+  <!-- Router Outlet -->
+  <router-outlet></router-outlet>

@@ -1,0 +1,12 @@
+.example-card {
+  width: 400px;
+}
+
+.example-header-image {
+  background-image: url('assets/logos/holdername.jpg');
+  background-size: cover;
+}
+
+md-grid-tile figure {
+  align-items: flex-start!important;
+}

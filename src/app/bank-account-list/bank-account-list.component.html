@@ -1,0 +1,22 @@
+<p>
+  bank-account-list works!
+</p>
+
+<div>
+  <md-list>
+    <md-list-item class="md-2-line" *ngFor="let bankAccount of bankAccounts">
+
+      <div class="md-list-item"
+           [class.selected]="bankAccount === selectedBankAccount"
+           (click)="onSelect(bankAccount)">
+        <md-checkbox class="md-checkbox"></md-checkbox>
+        <a [routerLink]="['/bankaccounts', bankAccount.iban]">{{ bankAccount.iban }}</a>
+        <label>{{ bankAccount.holderName }}</label>
+        <label>{{ bankAccount.bankName }}</label>
+        <label>{{ bankAccount.country }}</label>
+        <button md-button="" class="destroy" (click)="removeTodo(todo)"></button>
+      </div>
+
+    </md-list-item>
+  </md-list>
+</div>

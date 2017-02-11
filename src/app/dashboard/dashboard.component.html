@@ -1,0 +1,28 @@
+<h1> Dashboard </h1>
+<md-grid-list cols="3">
+
+  <md-grid-tile rowHeight="2:1" gutterSize="15px" *ngFor="let bankAccount of bankAccounts">
+
+    <md-card class="example-card">
+
+      <md-card-header>
+        <div md-card-avatar class="example-header-image"></div>
+        <md-card-title>{{bankAccount.iban}}</md-card-title>
+        <md-card-subtitle>{{ bankAccount.country }} - {{ bankAccount.bankName }}</md-card-subtitle>
+      </md-card-header>
+
+      <md-card-content>
+        <p>{{ bankAccount.holderName }}</p>
+      </md-card-content>
+
+      <md-card-actions>
+        <button md-button routerLink=".">VIEW GRAPH</button>
+        <button md-button [routerLink]="['/bankaccounts', bankAccount.iban]">VIEW DETAILS</button>
+      </md-card-actions>
+
+    </md-card>
+
+  </md-grid-tile>
+
+</md-grid-list>
+
